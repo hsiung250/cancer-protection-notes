@@ -9,6 +9,8 @@ index.html                         課程總目錄首頁
 styles.css                         總目錄首頁樣式
 og.png                             總目錄社群分享圖
 .nojekyll                          GitHub Pages 靜態發布設定
+assets/
+  haven-logo.png                   網站頁首品牌圖示
 courses/
   cancer-protection/
     index.html                     癌症保障自學筆記
