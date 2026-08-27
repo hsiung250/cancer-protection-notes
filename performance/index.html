@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="高天、高天二與兩區加總的工作月及競賽業績儀表板">
+  <meta name="robots" content="noindex, nofollow">
+  <title>高天業績</title>
+  <link rel="icon" href="https://hsiung250.github.io/cancer-protection-notes/assets/haven-logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="回到頁首">
+      <span class="brand-mark"><img src="https://hsiung250.github.io/cancer-protection-notes/assets/haven-logo.png" alt="Haven logo"></span>
+      <span>
+        <strong>高天業績</strong>
+        <small id="brand-scope">高天 · S1290</small>
+      </span>
+    </a>
+    <nav aria-label="頁面導覽">
+      <a href="#work-month">工作月</a>
+      <a href="#competition">競賽</a>
+      <a href="#notes">資料說明</a>
+    </nav>
+    <button class="import-trigger" type="button" data-open-import><span>＋</span> 匯入最新報表</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> <span id="hero-period">115 年第九工作月</span></p>
+        <h1 class="dashboard-title"><span id="view-title">高天</span><small>業績總覽</small></h1>
+        <p class="scope-code" id="view-code">S1290</p>
+        <div class="unit-switcher" role="tablist" aria-label="選擇業績單位">
+          <button class="active" type="button" role="tab" aria-selected="true" data-unit-view="S1290"><strong>高天</strong><small>S1290</small></button>
+          <button type="button" role="tab" aria-selected="false" data-unit-view="S1320"><strong>高天二</strong><small>S1320</small></button>
+          <button type="button" role="tab" aria-selected="false" data-unit-view="total"><strong>兩區加總</strong><small>S1290 + S1320</small></button>
+        </div>
+        <div class="hero-actions">
+          <a class="button primary" href="#work-month">查看工作月進度</a>
+          <a class="button ghost" href="#competition">查看競賽名單</a>
+          <button class="button update" type="button" data-open-import>匯入 Excel 更新</button>
+        </div>
+      </div>
+      <aside class="hero-score" aria-label="FYC 達成狀況">
+        <div class="fyc-switcher" role="tablist" aria-label="選擇 FYC 累積口徑">
+          <button class="active" type="button" role="tab" aria-selected="true" data-fyc-view="month">當月累積受理</button>
+          <button type="button" role="tab" aria-selected="false" data-fyc-view="year">年度累積</button>
+        </div>
+        <div class="score-topline">
+          <span id="hero-fyc-label">當月累積受理 FYC</span>
+          <span class="status" id="hero-status">持續推進</span>
+        </div>
+        <strong class="score-number"><span id="hero-fyc-rate">2.5</span><small>%</small></strong>
+        <div class="hero-progress" aria-label="FYC 達成率">
+          <span id="hero-fyc-progress" style="--value: 2.5%"></span>
+        </div>
+        <div class="score-meta">
+          <span><small id="hero-actual-label">當月累積</small><b id="hero-fyc-actual">37,368</b></span>
+          <span><small id="hero-target-label">當月目標</small><b id="hero-fyc-target">1,510,000</b></span>
+        </div>
+        <p id="hero-gap-label">距離當月目標尚差 <b id="hero-fyc-gap">1,472,632</b></p>
+      </aside>
+    </section>
+
+    <section class="snapshot" aria-label="資料快照">
+      <div><span>資料日期</span><strong id="snapshot-date">115 / 08 / 26</strong></div>
+      <div><span>專職人力</span><strong id="snapshot-headcount">56 人</strong></div>
+      <div><span>當月件數</span><strong id="snapshot-cases">6 件</strong></div>
+      <div><span>當月舉績</span><strong id="snapshot-contributors">4 人</strong></div>
+    </section>
+
+    <section id="work-month" class="section-block">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span></span> WORK MONTH 09</p>
+          <h2>工作月業績</h2>
+        </div>
+        <p>首頁預設顯示當月累積受理 FYC；年度累積可由上方按鈕切換查看。</p>
+      </div>
+
+      <div class="metric-grid">
+        <article class="metric-card coral">
+          <div class="metric-header"><span>FYC</span><b id="fyc-year-badge">年度 81.8%</b></div>
+          <h3 id="fyc-month-actual">37,368</h3>
+          <p>本工作月目標 <span id="fyc-month-target">1,510,000</span></p>
+          <div class="bar-row"><span>當月進度</span><strong id="fyc-month-rate">2.5%</strong></div>
+          <div class="progress"><span id="fyc-month-progress" style="--value: 2.5%"></span></div>
+          <div class="metric-footer">
+            <span><small>尚差</small><b id="fyc-month-gap">1,472,632</b></span>
+            <span><small>年度累計</small><b id="fyc-year-actual">14,535,044</b></span>
+          </div>
+        </article>
+
+        <article class="metric-card gold">
+          <div class="metric-header"><span>保費</span><b id="premium-year-badge">年度 160.7%</b></div>
+          <h3 id="premium-month-actual">255,385</h3>
+          <p>本工作月目標 <span id="premium-month-target">12,420,000</span></p>
+          <div class="bar-row"><span>當月進度</span><strong id="premium-month-rate">2.1%</strong></div>
+          <div class="progress"><span id="premium-month-progress" style="--value: 2.1%"></span></div>
+          <div class="metric-footer">
+            <span><small>尚差</small><b id="premium-month-gap">12,164,615</b></span>
+            <span><small>年度累計</small><b id="premium-year-actual">152,673,930</b></span>
+          </div>
+        </article>
+
+        <article class="metric-card blue">
+          <div class="metric-header"><span>換算 CSM</span><b id="csm-year-badge">年度 124.4%</b></div>
+          <h3 id="csm-month-actual">23.8</h3>
+          <p>本工作月目標 <span id="csm-month-target">684</span></p>
+          <div class="bar-row"><span>當月進度</span><strong id="csm-month-rate">3.5%</strong></div>
+          <div class="progress"><span id="csm-month-progress" style="--value: 3.5%"></span></div>
+          <div class="metric-footer">
+            <span><small>尚差</small><b id="csm-month-gap">660.2</b></span>
+            <span><small>年度累計</small><b id="csm-year-actual">6,507.2</b></span>
+          </div>
+        </article>
+      </div>
+
+      <div class="year-panel">
+        <div class="panel-intro">
+          <p class="eyebrow light"><span></span> YEAR TO DATE</p>
+          <h3>年度累積<br>目標進度</h3>
+          <p>FYC 年度目標依高天、高天二及兩區加總分別計算；進度條以 100% 為滿格。</p>
+        </div>
+        <div class="year-bars">
+          <div class="year-item">
+            <div><span>FYC</span><strong id="fyc-year-rate">81.8%</strong></div>
+            <div class="track"><i id="fyc-year-progress" style="--value: 81.8%"></i></div>
+            <small id="fyc-year-over">尚差 3,229,661</small>
+          </div>
+          <div class="year-item">
+            <div><span>保費</span><strong id="premium-year-rate">160.7%</strong></div>
+            <div class="track"><i id="premium-year-progress" style="--value: 100%"></i></div>
+            <small id="premium-year-over">超標 60.7%</small>
+          </div>
+          <div class="year-item">
+            <div><span>換算 CSM</span><strong id="csm-year-rate">124.4%</strong></div>
+            <div class="track"><i id="csm-year-progress" style="--value: 100%"></i></div>
+            <small id="csm-year-over">超標 24.4%</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="people-grid">
+        <article>
+          <span class="people-number" id="all-contribution-rate">7.1%</span>
+          <h3>全體舉績率</h3>
+          <p id="all-contribution-copy">56 位專職同仁中，已有 4 位在本工作月舉績。</p>
+          <div class="progress thin"><span id="all-contribution-progress" style="--value: 7.1%"></span></div>
+        </article>
+        <article>
+          <span class="people-number" id="manager-contribution-rate">15.0%</span>
+          <h3>主管舉績率</h3>
+          <p id="manager-contribution-copy">20 位業務／行銷主管中，已有 3 位舉績。</p>
+          <div class="progress thin"><span id="manager-contribution-progress" style="--value: 15%"></span></div>
+        </article>
+        <article>
+          <span class="people-number" id="active-rate">1.8%</span>
+          <h3>實動率</h3>
+          <p id="active-copy">目前實動 1 人；首日數據適合做為每日推進起點。</p>
+          <div class="progress thin"><span id="active-progress" style="--value: 1.8%"></span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="competition" class="section-block competition-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span></span> Q3 COMPETITION</p>
+          <h2>第三季競賽進度</h2>
+        </div>
+        <p>業績期間 <span id="competition-period">115/06/26–115/08/25</span>。以下列出<span id="competition-scope">高天</span>成員，獎金金額依公司報表試算。</p>
+      </div>
+
+      <div class="competition-summary">
+        <article>
+          <span class="summary-kicker">個人組</span>
+          <strong id="personal-quarter-fyc">1,937,096</strong>
+          <p>第三季個人險 FYC</p>
+          <div class="summary-stats"><span><b id="personal-season-count">3</b> 人季達標</span><span><b id="personal-over-count">2</b> 人超標</span></div>
+        </article>
+        <article>
+          <span class="summary-kicker">個人組獎勵試算</span>
+          <strong id="personal-awards">$125,000</strong>
+          <p id="personal-awards-copy">季達標 75,000 ＋ 超標 50,000</p>
+          <div class="summary-stats"><span><b id="personal-count">36</b> 人列入追蹤</span></div>
+        </article>
+        <article>
+          <span class="summary-kicker">新人組</span>
+          <strong id="newcomer-quarter-fyc">316,721</strong>
+          <p>第三季個人險 FYC</p>
+          <div class="summary-stats"><span><b id="newcomer-qualified-count">16</b> 人具新人資格</span><span><b id="newcomer-count">19</b> 人列入追蹤</span></div>
+        </article>
+        <article>
+          <span class="summary-kicker">新人月獎勵試算</span>
+          <strong id="newcomer-awards">$25,000</strong>
+          <p id="newcomer-awards-copy">7 工 7,000 ＋ 8 工 18,000</p>
+          <div class="summary-stats"><span><b id="newcomer-award-count">7</b> 人次獲月獎勵</span></div>
+        </article>
+      </div>
+
+      <div class="leaderboards">
+        <article class="leaderboard">
+          <div class="leaderboard-head">
+            <div><span>個人組</span><h3>季達標進度</h3></div>
+            <small>達標基準 150,000 FYC</small>
+          </div>
+          <ol id="personal-leaderboard">
+            <li><b>1</b><span class="person"><strong>蕭如菁</strong><small>426,389 FYC</small></span><span class="mini-track"><i style="--value:100%"></i></span><em>284%</em></li>
+            <li><b>2</b><span class="person"><strong>黃宥棋</strong><small>378,779 FYC</small></span><span class="mini-track"><i style="--value:100%"></i></span><em>253%</em></li>
+            <li><b>3</b><span class="person"><strong>劉宇恩</strong><small>223,608 FYC</small></span><span class="mini-track"><i style="--value:100%"></i></span><em>149%</em></li>
+            <li><b>4</b><span class="person"><strong>許智雄</strong><small>140,692 FYC</small></span><span class="mini-track"><i style="--value:93.8%"></i></span><em>94%</em></li>
+            <li><b>5</b><span class="person"><strong>何宜家</strong><small>137,822 FYC</small></span><span class="mini-track"><i style="--value:91.9%"></i></span><em>92%</em></li>
+            <li><b>6</b><span class="person"><strong>戴東志</strong><small>126,902 FYC</small></span><span class="mini-track"><i style="--value:84.6%"></i></span><em>85%</em></li>
+          </ol>
+        </article>
+
+        <article class="leaderboard newcomer">
+          <div class="leaderboard-head">
+            <div><span>新人組</span><h3>季達標進度</h3></div>
+            <small>新人資格基準 80,000 FYC</small>
+          </div>
+          <ol id="newcomer-leaderboard">
+            <li><b>1</b><span class="person"><strong>劉家均</strong><small>76,066 FYC</small></span><span class="mini-track"><i style="--value:95.1%"></i></span><em>95%</em></li>
+            <li><b>2</b><span class="person"><strong>莊詠崴</strong><small>57,831 FYC</small></span><span class="mini-track"><i style="--value:72.3%"></i></span><em>72%</em></li>
+            <li><b>3</b><span class="person"><strong>呂姿穎</strong><small>41,919 FYC</small></span><span class="mini-track"><i style="--value:52.4%"></i></span><em>52%</em></li>
+            <li><b>4</b><span class="person"><strong>黃聖恩</strong><small>39,535 FYC</small></span><span class="mini-track"><i style="--value:49.4%"></i></span><em>49%</em></li>
+            <li><b>5</b><span class="person"><strong>李彩禎</strong><small>38,746 FYC</small></span><span class="mini-track"><i style="--value:48.4%"></i></span><em>48%</em></li>
+            <li><b>6</b><span class="person"><strong>倪心彤</strong><small>31,752 FYC</small></span><span class="mini-track"><i style="--value:39.7%"></i></span><em>40%</em></li>
+          </ol>
+        </article>
+      </div>
+    </section>
+
+    <section id="notes" class="notes">
+      <div>
+        <span class="note-icon">i</span>
+        <div>
+          <h2>資料閱讀說明</h2>
+          <p>工作月資料截至 <span id="note-work-date">115/08/26</span>，競賽資料截至 <span id="note-competition-date">115/08/25</span>；FYC 年度累積來源為<span id="note-fyc-source">115/01–115/07 歷史核實</span>。本頁百分比由來源數值換算並四捨五入至小數一位。</p>
+        </div>
+      </div>
+      <p class="privacy"><strong>內部資料</strong>　頁面僅包含 S1290 高天與 S1320 高天二資料，請依公司規範使用與分享。</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><img src="https://hsiung250.github.io/cancer-protection-notes/assets/haven-logo.png" alt=""><span><strong>高天業績</strong><small>高天 · 高天二</small></span></div>
+    <p>資料來源：工作月受理業績、競賽獎勵及歷史核實業績報表</p>
+  </footer>
+
+  <dialog class="import-dialog" id="import-dialog" aria-labelledby="import-title">
+    <form class="import-panel" id="import-form">
+      <div class="dialog-head">
+        <div>
+          <p class="eyebrow"><span></span> LOCAL EXCEL UPDATE</p>
+          <h2 id="import-title">匯入最新公司報表</h2>
+        </div>
+        <button class="dialog-close" type="button" data-close-import aria-label="關閉">×</button>
+      </div>
+      <p class="local-note"><strong>只在這台裝置處理</strong>　Excel 與密碼不會上傳；網頁只擷取 S1290 高天與 S1320 高天二資料。</p>
+      <div class="file-fields">
+        <label class="file-field">
+          <span class="file-step">01</span>
+          <span class="file-copy"><strong>工作月業績報表</strong><small>選擇「工作月受理業績報表」.xlsm</small></span>
+          <input id="workbook-file" name="workbook" type="file" accept=".xlsm,.xlsx" required>
+        </label>
+        <label class="file-field">
+          <span class="file-step">02</span>
+          <span class="file-copy"><strong>第三季競賽報表</strong><small>選擇「競賽獎勵報表」.xlsm</small></span>
+          <input id="competition-file" name="competition" type="file" accept=".xlsm,.xlsx" required>
+        </label>
+        <label class="file-field">
+          <span class="file-step">03</span>
+          <span class="file-copy"><strong>歷史核實業績</strong><small>可一次選取高天與高天二的 .xls 檔</small></span>
+          <input id="history-file" name="history" type="file" accept=".xls,.html" multiple>
+        </label>
+      </div>
+      <label class="password-field">
+        <span>Excel 開啟密碼</span>
+        <span class="password-control"><input id="excel-password" type="password" autocomplete="off" placeholder="輸入報表密碼" required><button id="toggle-password" type="button">顯示</button></span>
+        <small>密碼只存在於這次匯入過程，不會被儲存。</small>
+      </label>
+      <label class="remember-field"><input id="remember-result" type="checkbox" checked> 在這台裝置記住整理後的兩區數據</label>
+      <div class="import-status" id="import-status" role="status" aria-live="polite">請選擇兩份主要報表；歷史核實檔可另外加入。</div>
+      <div class="dialog-actions">
+        <button class="button ghost" type="button" id="restore-default">恢復內建資料</button>
+        <button class="button primary" type="submit" id="run-import">讀取報表並更新</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script type="module" src="bundle.js"></script>
+</body>
+</html>
