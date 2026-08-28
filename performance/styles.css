@@ -192,7 +192,10 @@ footer > p { max-width: 520px; margin: 0; color: var(--muted); font-size: .7rem;
 .dialog-close { width: 38px; height: 38px; display: grid; place-items: center; flex: 0 0 auto; border: 1px solid var(--line); border-radius: 50%; color: var(--navy); background: white; font-size: 1.5rem; line-height: 1; cursor: pointer; }
 .local-note { margin: 22px 0; padding: 13px 15px; border-radius: 13px; color: #53636b; background: #edf1ef; font-size: .8rem; }
 .local-note strong { color: var(--blue); }
-.file-fields { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.single-file-guide { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 0 0 12px; }
+.single-file-guide span { display: flex; gap: 8px; align-items: center; padding: 10px 12px; border-radius: 12px; color: #5d696f; background: #f5efe4; font-size: .7rem; font-weight: 800; }
+.single-file-guide b { width: 22px; height: 22px; display: grid; place-items: center; flex: 0 0 auto; border-radius: 50%; color: white; background: var(--coral); font-size: .65rem; }
+.file-fields { display: grid; grid-template-columns: 1fr; gap: 12px; }
 .file-field { min-height: 155px; padding: 18px; display: flex; flex-direction: column; border: 1px dashed rgba(23,54,74,.26); border-radius: 18px; background: #faf8f3; cursor: pointer; }
 .file-field:focus-within { border-color: var(--coral); box-shadow: 0 0 0 3px var(--coral-soft); }
 .file-step { color: var(--coral); font-size: .68rem; font-weight: 900; letter-spacing: .12em; }
@@ -201,6 +204,8 @@ footer > p { max-width: 520px; margin: 0; color: var(--muted); font-size: .7rem;
 .file-copy strong { color: var(--navy); font-size: .92rem; }
 .file-copy small { color: var(--muted); font-size: .68rem; }
 .file-field input { width: 100%; margin-top: auto; font-size: .7rem; }
+.single-file-field { min-height: 178px; }
+.single-file-field .file-copy small { max-width: 570px; margin-top: 5px; line-height: 1.55; }
 .password-field { display: block; margin-top: 18px; }
 .password-field > span:first-child { display: block; margin-bottom: 7px; color: var(--navy); font-size: .78rem; font-weight: 900; }
 .password-control { display: flex; border: 1px solid var(--line); border-radius: 12px; background: white; overflow: hidden; }
@@ -223,7 +228,7 @@ footer > p { max-width: 520px; margin: 0; color: var(--muted); font-size: .7rem;
   .competition-summary { grid-template-columns: 1fr 1fr; }
   .leaderboards { grid-template-columns: 1fr; }
   .year-panel { grid-template-columns: 1fr; gap: 30px; }
-  .file-fields { grid-template-columns: 1fr 1fr; }
+  .single-file-guide { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 700px) {
@@ -255,7 +260,6 @@ footer > p { max-width: 520px; margin: 0; color: var(--muted); font-size: .7rem;
   footer { display: block; }
   footer > p { margin-top: 20px; text-align: left; }
   .import-panel { padding: 24px 18px; }
-  .file-fields { grid-template-columns: 1fr; }
   .file-field { min-height: 140px; }
   .dialog-actions { flex-direction: column-reverse; }
   .dialog-actions .button { width: 100%; }

@@ -6,7 +6,7 @@
   <meta name="description" content="高天、高天二與兩區加總的工作月及競賽業績儀表板">
   <meta name="robots" content="noindex, nofollow">
   <title>高天業績</title>
-  <link rel="icon" href="https://hsiung250.github.io/cancer-protection-notes/assets/haven-logo.png">
+  <link rel="icon" href="../assets/haven-logo.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
 
   <header class="topbar">
     <a class="brand" href="#top" aria-label="回到頁首">
-      <span class="brand-mark"><img src="https://hsiung250.github.io/cancer-protection-notes/assets/haven-logo.png" alt="Haven logo"></span>
+      <span class="brand-mark"><img src="../assets/haven-logo.png" alt="Haven logo"></span>
       <span>
         <strong>高天業績</strong>
         <small id="brand-scope">高天 · S1290</small>
@@ -250,7 +250,7 @@
   </main>
 
   <footer>
-    <div class="footer-brand"><img src="https://hsiung250.github.io/cancer-protection-notes/assets/haven-logo.png" alt=""><span><strong>高天業績</strong><small>高天 · 高天二</small></span></div>
+    <div class="footer-brand"><img src="../assets/haven-logo.png" alt=""><span><strong>高天業績</strong><small>高天 · 高天二</small></span></div>
     <p>資料來源：工作月受理業績、競賽獎勵及歷史核實業績報表</p>
   </footer>
 
@@ -263,34 +263,29 @@
         </div>
         <button class="dialog-close" type="button" data-close-import aria-label="關閉">×</button>
       </div>
-      <p class="local-note"><strong>只在這台裝置處理</strong>　Excel 與密碼不會上傳；網頁只擷取 S1290 高天與 S1320 高天二資料。</p>
+      <p class="local-note"><strong>只在這台裝置處理</strong>　每次只讀取一個檔案；Excel 與密碼不會上傳，已讀取的結果會保留來合併更新。</p>
+      <div class="single-file-guide" aria-label="單檔匯入流程">
+        <span><b>1</b>選擇一個檔案</span>
+        <span><b>2</b>讀取並更新</span>
+        <span><b>3</b>再選下一個</span>
+      </div>
       <div class="file-fields">
-        <label class="file-field">
-          <span class="file-step">01</span>
-          <span class="file-copy"><strong>工作月業績報表</strong><small>選擇「工作月受理業績報表」.xlsm</small></span>
-          <input id="workbook-file" name="workbook" type="file" accept=".xlsm,.xlsx" required>
-        </label>
-        <label class="file-field">
-          <span class="file-step">02</span>
-          <span class="file-copy"><strong>第三季競賽報表</strong><small>選擇「競賽獎勵報表」.xlsm</small></span>
-          <input id="competition-file" name="competition" type="file" accept=".xlsm,.xlsx" required>
-        </label>
-        <label class="file-field">
-          <span class="file-step">03</span>
-          <span class="file-copy"><strong>歷史核實業績</strong><small>可一次選取高天與高天二的 .xls 檔</small></span>
-          <input id="history-file" name="history" type="file" accept=".xls,.html" multiple>
+        <label class="file-field single-file-field">
+          <span class="file-step">ONE FILE AT A TIME</span>
+          <span class="file-copy"><strong>選擇這次要讀取的一個報表</strong><small>支援工作月、競賽 `.xlsm/.xlsx` 與單一高天／高天二歷史核實 `.xls/.html`；網頁會自動判斷類型。</small></span>
+          <input id="report-file" name="report" type="file" accept=".xlsm,.xlsx,.xls,.html,.htm" required>
         </label>
       </div>
       <label class="password-field">
-        <span>Excel 開啟密碼</span>
-        <span class="password-control"><input id="excel-password" type="password" autocomplete="off" placeholder="輸入報表密碼" required><button id="toggle-password" type="button">顯示</button></span>
-        <small>密碼只存在於這次匯入過程，不會被儲存。</small>
+        <span>Excel 開啟密碼（工作月或競賽報表才需要）</span>
+        <span class="password-control"><input id="excel-password" type="password" autocomplete="off" placeholder="加密 Excel 才需輸入"><button id="toggle-password" type="button">顯示</button></span>
+        <small>歷史核實 `.xls` 不需密碼；密碼只存在於這次讀取過程，不會儲存。</small>
       </label>
       <label class="remember-field"><input id="remember-result" type="checkbox" checked> 在這台裝置記住整理後的兩區數據</label>
-      <div class="import-status" id="import-status" role="status" aria-live="polite">請選擇兩份主要報表；歷史核實檔可另外加入。</div>
+      <div class="import-status" id="import-status" role="status" aria-live="polite">請選擇一個檔案。讀取完成後，再選擇下一個。</div>
       <div class="dialog-actions">
         <button class="button ghost" type="button" id="restore-default">恢復內建資料</button>
-        <button class="button primary" type="submit" id="run-import">讀取報表並更新</button>
+        <button class="button primary" type="submit" id="run-import">讀取這一個檔案</button>
       </div>
     </form>
   </dialog>
