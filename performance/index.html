@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="高天、高天二與兩區加總的工作月及競賽業績儀表板">
+  <meta name="description" content="高天、高天二與兩區加總的工作月、第三季及下半年高峰競賽業績儀表板">
   <meta name="robots" content="noindex, nofollow">
   <title>高天業績</title>
   <link rel="icon" href="assets/haven-logo.png">
@@ -24,6 +24,7 @@
     <nav aria-label="頁面導覽">
       <a href="#work-month">工作月</a>
       <a href="#competition">競賽</a>
+      <a href="#high-peak">高峰</a>
       <a href="#notes">資料說明</a>
     </nav>
     <button class="import-trigger" type="button" data-open-import><span>＋</span> 匯入最新報表</button>
@@ -237,12 +238,90 @@
       </div>
     </section>
 
+    <section id="high-peak" class="section-block high-peak-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span></span> HIGH PEAK TRAVEL</p>
+          <h2>下半年高峰旅遊競賽</h2>
+        </div>
+        <p>競賽期間為第三季＋第四季，旅遊地點為加拿大、印尼雅加達。目前以已匯入的第三季競賽 FYC 顯示進度與差額。</p>
+      </div>
+
+      <div class="high-peak-rules" aria-label="高峰競賽資格規則">
+        <article>
+          <span class="rule-number">01</span>
+          <strong>個人組</strong>
+          <b>360,000 FYC</b>
+          <p>第三、第四季個人險 FYC 合計達標，可獲自費參加高峰旅遊資格。</p>
+        </article>
+        <article>
+          <span class="rule-number">02</span>
+          <strong>新人組</strong>
+          <b>220,000 FYC</b>
+          <p>一般門檻；實際標準依兩季適用組別認定，跨組情形另依辦法計算。</p>
+        </article>
+        <article>
+          <span class="rule-number">03</span>
+          <strong>通訊處組</strong>
+          <b>3,600,000 FYC</b>
+          <p>每一通訊處另須成長率達 10% 以上，或符合公司公告的優惠標準。</p>
+        </article>
+        <article>
+          <span class="rule-number">04</span>
+          <strong>增員組</strong>
+          <b>新增資格 2 次</b>
+          <p>第 7 至第 12 工作月，增員之星俱樂部會員資格新增 2 次。</p>
+        </article>
+      </div>
+
+      <div class="high-peak-office-card">
+        <div>
+          <span class="summary-kicker">通訊處組 · 目前第三季進度</span>
+          <h3><span id="high-peak-scope">高天</span>個人險 FYC</h3>
+          <p>資料截至 <span id="high-peak-date">115/08/25</span>；成長率條件仍須搭配 114 年季平均基期核對，兩區加總僅供進度參考，資格按各通訊處獨立認定。</p>
+        </div>
+        <div class="high-peak-score">
+          <strong id="high-peak-office-fyc">1,937,096</strong>
+          <small>目標 <span id="high-peak-office-target">3,600,000</span> FYC</small>
+        </div>
+        <div class="high-peak-progress-copy">
+          <span id="high-peak-office-gap-label">競賽差額 <b id="high-peak-office-gap">1,662,904</b> FYC</span>
+          <em id="high-peak-office-rate">53.8%</em>
+        </div>
+        <div class="track high-peak-track"><i id="high-peak-office-progress" style="--value:53.8%"></i></div>
+      </div>
+
+      <div class="leaderboards high-peak-leaderboards">
+        <article class="leaderboard high-peak-personal">
+          <div class="leaderboard-head">
+            <div><span>高峰個人組</span><h3>36 萬達標進度</h3></div>
+            <small>目前採已匯入第三季 FYC</small>
+          </div>
+          <ol id="high-peak-personal-leaderboard"></ol>
+        </article>
+        <article class="leaderboard high-peak-newcomer">
+          <div class="leaderboard-head">
+            <div><span>高峰新人組</span><h3>22 萬一般門檻</h3></div>
+            <small>跨組門檻依正式資格認定</small>
+          </div>
+          <ol id="high-peak-newcomer-leaderboard"></ol>
+        </article>
+      </div>
+
+      <div class="high-peak-note">
+        <strong>新人組跨季門檻提醒</strong>
+        <span>第三季新人／第四季個人：290,000 FYC</span>
+        <span>第三季報聘一年內／第四季新人：190,000 FYC</span>
+        <span>兩季皆為報聘一年內新人：160,000 FYC</span>
+      </div>
+    </section>
+
     <section id="notes" class="notes">
       <div>
         <span class="note-icon">i</span>
         <div>
           <h2>資料閱讀說明</h2>
-          <p>工作月資料截至 <span id="note-work-date">115/08/26</span>，競賽資料截至 <span id="note-competition-date">115/08/25</span>；FYC 年度累積來源為<span id="note-fyc-source">115/01–115/07 歷史核實</span>。本頁百分比由來源數值換算並四捨五入至小數一位。</p>
+          <p>工作月資料截至 <span id="note-work-date">115/08/26</span>，競賽資料截至 <span id="note-competition-date">115/08/25</span>；高峰競賽依 115 年「下半年高峰旅遊」競賽辦法呈現。FYC 年度累積來源為<span id="note-fyc-source">115/01–115/07 歷史核實</span>。本頁百分比由來源數值換算並四捨五入至小數一位。</p>
         </div>
       </div>
       <p class="privacy"><strong>內部資料</strong>　頁面僅包含 S1290 高天與 S1320 高天二資料，請依公司規範使用與分享。</p>

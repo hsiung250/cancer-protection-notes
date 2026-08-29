@@ -174,6 +174,30 @@ main { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
 .mini-track { height: 6px; }
 .leaderboard li em { text-align: right; color: #ffd274; font-size: .73rem; font-style: normal; font-weight: 900; }
 
+.high-peak-section { padding-top: 95px; border-top: 1px solid var(--line); }
+.high-peak-rules { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.high-peak-rules article { position: relative; min-height: 210px; padding: 24px; overflow: hidden; border: 1px solid rgba(239,170,54,.24); border-radius: 22px; background: linear-gradient(150deg, #fffdf9, #f5eee1); }
+.high-peak-rules article::after { content: ""; position: absolute; right: -28px; bottom: -34px; width: 100px; height: 100px; border: 22px solid rgba(239,170,54,.11); border-radius: 50%; }
+.rule-number { display: block; color: var(--coral); font-size: .69rem; font-weight: 900; letter-spacing: .14em; }
+.high-peak-rules strong { display: block; margin-top: 18px; color: var(--navy); font-size: 1.1rem; }
+.high-peak-rules b { display: block; margin-top: 6px; color: var(--coral); font-size: 1.45rem; letter-spacing: -.03em; }
+.high-peak-rules p { position: relative; z-index: 1; margin: 12px 0 0; color: var(--muted); font-size: .75rem; }
+
+.high-peak-office-card { display: grid; grid-template-columns: 1.3fr .7fr; gap: 12px 35px; margin-top: 20px; padding: 30px; border-radius: 27px; color: white; background: linear-gradient(135deg, #17364a, #285d6c); box-shadow: var(--shadow); }
+.high-peak-office-card h3 { margin: 5px 0 0; font-size: 1.5rem; }
+.high-peak-office-card p { margin: 6px 0 0; color: rgba(255,255,255,.57); font-size: .73rem; }
+.high-peak-score { text-align: right; }
+.high-peak-score strong { display: block; color: #ffd274; font-size: 2rem; line-height: 1.1; letter-spacing: -.04em; }
+.high-peak-score small { color: rgba(255,255,255,.58); font-size: .68rem; }
+.high-peak-progress-copy { grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: center; color: rgba(255,255,255,.72); font-size: .78rem; }
+.high-peak-progress-copy b { color: white; }
+.high-peak-progress-copy em { color: #ffd274; font-size: .9rem; font-style: normal; font-weight: 900; }
+.high-peak-track { grid-column: 1 / -1; height: 9px; }
+.high-peak-personal { background: #3a435d; }
+.high-peak-newcomer { background: #67533e; }
+.high-peak-note { display: grid; grid-template-columns: 1.1fr repeat(3, 1fr); gap: 12px; margin-top: 18px; padding: 18px 20px; border-left: 4px solid var(--gold); border-radius: 0 15px 15px 0; color: #5e6669; background: #f1eadf; font-size: .7rem; }
+.high-peak-note strong { color: var(--navy); }
+
 .notes { margin-bottom: 80px; padding: 30px; border: 1px solid var(--line); border-radius: 24px; background: rgba(255,255,255,.5); scroll-margin-top: 100px; }
 .notes > div { display: flex; gap: 17px; align-items: flex-start; }
 .note-icon { flex: 0 0 34px; height: 34px; display: grid; place-items: center; border-radius: 50%; color: white; background: var(--coral); font-family: Georgia, serif; font-style: italic; font-weight: 900; }
@@ -228,6 +252,8 @@ footer > p { max-width: 520px; margin: 0; color: var(--muted); font-size: .7rem;
   .hero-score { max-width: 560px; }
   .metric-grid, .people-grid { grid-template-columns: 1fr; }
   .competition-summary { grid-template-columns: 1fr 1fr; }
+  .high-peak-rules { grid-template-columns: 1fr 1fr; }
+  .high-peak-note { grid-template-columns: 1fr 1fr; }
   .leaderboards { grid-template-columns: 1fr; }
   .year-panel { grid-template-columns: 1fr; gap: 30px; }
   .single-file-guide { grid-template-columns: 1fr; }
@@ -253,6 +279,11 @@ footer > p { max-width: 520px; margin: 0; color: var(--muted); font-size: .7rem;
   .section-block { padding-bottom: 80px; }
   .year-panel { padding: 28px 23px; }
   .competition-summary { grid-template-columns: 1fr; }
+  .high-peak-rules { grid-template-columns: 1fr; }
+  .high-peak-office-card { grid-template-columns: 1fr; }
+  .high-peak-score { text-align: left; }
+  .high-peak-progress-copy, .high-peak-track { grid-column: 1; }
+  .high-peak-note { grid-template-columns: 1fr; }
   .leaderboard { padding: 24px 18px; }
   .leaderboard-head { display: block; }
   .leaderboard-head > small { display: block; margin-top: 5px; }
