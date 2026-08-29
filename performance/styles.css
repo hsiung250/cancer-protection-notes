@@ -165,12 +165,12 @@ main { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
 .leaderboard-head h3 { margin: 2px 0 0; font-size: 1.35rem; }
 .leaderboard-head > small { color: rgba(255,255,255,.58); font-size: .68rem; }
 .leaderboard ol { padding: 0; margin: 0; list-style: none; }
-.leaderboard li { display: grid; grid-template-columns: 22px 1.25fr 1fr 42px; gap: 10px; align-items: center; padding: 13px 0; border-top: 1px solid rgba(255,255,255,.1); }
+.leaderboard li { display: grid; grid-template-columns: 22px 1.55fr .85fr 42px; gap: 10px; align-items: center; padding: 13px 0; border-top: 1px solid rgba(255,255,255,.1); }
 .leaderboard li > b { color: rgba(255,255,255,.42); font-size: .72rem; }
 .person strong { display: block; font-size: .83rem; }
 .person small { display: block; color: rgba(255,255,255,.52); font-size: .64rem; }
-.person .competition-gap { margin-top: 3px; color: #ffd274; font-weight: 800; }
-.person .competition-gap.reached { color: #9fe2c4; }
+.person .competition-gap { display: inline-block; width: fit-content; margin-top: 5px; padding: 3px 7px; border-radius: 7px; color: #ffe09b; background: rgba(239,170,54,.14); font-size: .66rem; font-weight: 900; }
+.person .competition-gap.reached { color: #b9efd7; background: rgba(75,190,139,.14); }
 .mini-track { height: 6px; }
 .leaderboard li em { text-align: right; color: #ffd274; font-size: .73rem; font-style: normal; font-weight: 900; }
 
