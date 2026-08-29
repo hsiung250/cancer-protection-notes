@@ -149,7 +149,7 @@ main { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
 .progress.thin { height: 5px; }
 
 .individual-section { padding-top: 95px; border-top: 1px solid var(--line); }
-.individual-summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.individual-summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .individual-summary article { padding: 20px 22px; border: 1px solid var(--line); border-radius: 19px; background: rgba(255,253,249,.82); }
 .individual-summary span { display: block; color: var(--muted); font-size: .71rem; font-weight: 800; }
 .individual-summary strong { display: block; margin-top: 6px; color: var(--navy); font-size: 1.55rem; letter-spacing: -.035em; }
@@ -157,7 +157,7 @@ main { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
 .individual-reconcile[data-state="matched"] { border-color: #3a9270; color: #24694f; background: #e9f4ef; }
 .individual-reconcile[data-state="attention"] { border-color: var(--coral); color: #9a4638; background: #fae9e5; }
 .individual-table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 22px; background: var(--white); box-shadow: 0 14px 40px rgba(23,54,74,.06); }
-.individual-table { width: 100%; min-width: 850px; border-collapse: collapse; }
+.individual-table { width: 100%; min-width: 650px; border-collapse: collapse; }
 .individual-table th { padding: 13px 15px; color: #617078; background: #f4efe6; font-size: .68rem; letter-spacing: .04em; text-align: right; white-space: nowrap; }
 .individual-table th:nth-child(1), .individual-table th:nth-child(2) { text-align: left; }
 .individual-table td { padding: 13px 15px; border-top: 1px solid var(--line); color: #47565d; font-size: .78rem; text-align: right; white-space: nowrap; }
@@ -169,7 +169,6 @@ main { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
 .individual-fyc { color: var(--navy) !important; font-size: .9rem !important; font-weight: 900; }
 .individual-gap { display: inline-block; min-width: 92px; padding: 5px 8px; border-radius: 8px; color: #9a4638; background: #fae9e5; font-weight: 900; }
 .individual-gap.reached { color: #24694f; background: #e9f4ef; }
-.individual-active { color: #24694f; font-weight: 900; }
 .individual-empty { padding: 46px 24px; border: 1px dashed rgba(23,54,74,.28); border-radius: 22px; text-align: center; background: rgba(255,255,255,.45); }
 .individual-empty strong { color: var(--navy); font-size: 1.05rem; }
 .individual-empty p { max-width: 580px; margin: 8px auto 18px; color: var(--muted); font-size: .78rem; }
