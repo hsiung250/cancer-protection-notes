@@ -24,6 +24,7 @@
     </a>
     <nav aria-label="頁面導覽">
       <a href="#work-month">工作月</a>
+      <a href="#individual-performance">個人業績</a>
       <a href="#competition">競賽</a>
       <a href="#high-peak">高峰</a>
       <a href="#notes">資料說明</a>
@@ -167,6 +168,48 @@
           <p id="active-copy">目前實動 1 人；首日數據適合做為每日推進起點。</p>
           <div class="progress thin"><span id="active-progress" style="--value: 1.8%"></span></div>
         </article>
+      </div>
+    </section>
+
+    <section id="individual-performance" class="section-block individual-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span></span> INDIVIDUAL PERFORMANCE</p>
+          <h2><span id="individual-scope">高天</span>個人業績</h2>
+        </div>
+        <p>匯入工作月 Excel 後，自動依通訊處與姓名加總 FYC，並計算責任額差額、件數及壯實人力。</p>
+      </div>
+
+      <div class="individual-summary" aria-label="個人業績摘要">
+        <article><span>個人明細 FYC</span><strong id="individual-fyc-total">—</strong></article>
+        <article><span>有業績人數</span><strong id="individual-contributors">—</strong></article>
+        <article><span>達責任額人數</span><strong id="individual-target-count">—</strong></article>
+        <article><span>壯實人力</span><strong id="individual-active-count">—</strong></article>
+      </div>
+
+      <div class="individual-reconcile" id="individual-reconcile">尚未匯入個人業績明細。</div>
+
+      <div class="individual-table-wrap" id="individual-table-wrap" hidden>
+        <table class="individual-table">
+          <thead>
+            <tr>
+              <th scope="col">排名</th>
+              <th scope="col">姓名</th>
+              <th scope="col">FYC</th>
+              <th scope="col">責任額</th>
+              <th scope="col">責任差額</th>
+              <th scope="col">壽險件數</th>
+              <th scope="col">壯實人力</th>
+            </tr>
+          </thead>
+          <tbody id="individual-table-body"></tbody>
+        </table>
+      </div>
+
+      <div class="individual-empty" id="individual-empty">
+        <strong>匯入工作月 Excel 後自動顯示</strong>
+        <p>頁面只會擷取 S1290 高天與 S1320 高天二的個人資料，並在這台裝置完成加總。</p>
+        <button class="button primary" type="button" data-open-import>選擇 Excel 檔案</button>
       </div>
     </section>
 
