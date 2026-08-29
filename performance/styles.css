@@ -169,6 +169,8 @@ main { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
 .leaderboard li > b { color: rgba(255,255,255,.42); font-size: .72rem; }
 .person strong { display: block; font-size: .83rem; }
 .person small { display: block; color: rgba(255,255,255,.52); font-size: .64rem; }
+.person .competition-gap { margin-top: 3px; color: #ffd274; font-weight: 800; }
+.person .competition-gap.reached { color: #9fe2c4; }
 .mini-track { height: 6px; }
 .leaderboard li em { text-align: right; color: #ffd274; font-size: .73rem; font-style: normal; font-weight: 900; }
 
